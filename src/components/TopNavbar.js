@@ -22,12 +22,14 @@ function TopNavbar() {
                 </Navbar.Collapse>
                 <Nav className='d-flex pull-right'>
                     <Nav.Link href="/">
-                    <Badge bg="primary">Welcome User</Badge>
+                        <Badge bg="primary">Welcome User</Badge>
                     </Nav.Link>
                     <Nav.Link href="/">
                         <Badge bg="success">Dashboard</Badge>
                     </Nav.Link>
-                    <Button variant="outline-danger">Sign Out</Button>
+                    <Nav.Link href="/logout">
+                        <Button variant="outline-danger">Sign Out</Button>
+                    </Nav.Link>
                 </Nav>
             </Navbar>
         </>

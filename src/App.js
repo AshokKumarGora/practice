@@ -4,15 +4,29 @@ import Dashboard from './pages/Dashboard';
 import Footer from './components/Footer';
 import TopNavbar from './components/TopNavbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useRoutes,
+} from "react-router-dom";
 
-function App() {
+const Apps = () => {
+  let routes = useRoutes([
+    { path: "/", element: <Dashboard /> },
+    { path: "/logout", element: <TopNavbar /> },
+    // ...
+  ]);
+  return routes;
+};
+
+const App = () => {
   return (
-    <div className="App">
+    <Router>
       <TopNavbar />
-      <Dashboard />
-      <Footer />
-    </div>
+      <Apps />
+    </Router>
   );
-}
+};
 
 export default App;
