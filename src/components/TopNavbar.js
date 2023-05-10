@@ -1,7 +1,7 @@
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from './logo.png';
-import { Button } from 'react-bootstrap';
+import { Badge, Button } from 'react-bootstrap';
 function TopNavbar() {
     return (
         <>
@@ -22,10 +22,10 @@ function TopNavbar() {
                 </Navbar.Collapse>
                 <Nav className='d-flex pull-right'>
                     <Nav.Link href="/">
-                        Welcome User
+                    <Badge bg="primary">Welcome User</Badge>
                     </Nav.Link>
                     <Nav.Link href="/">
-                        Dashboard
+                        <Badge bg="success">Dashboard</Badge>
                     </Nav.Link>
                     <Button variant="outline-danger">Sign Out</Button>
                 </Nav>
