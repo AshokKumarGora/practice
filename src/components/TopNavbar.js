@@ -1,9 +1,7 @@
-// import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from './logo.png';
-import userlogo from './userlogo.png';
+import { Button } from 'react-bootstrap';
 function TopNavbar() {
     return (
         <>
@@ -23,15 +21,13 @@ function TopNavbar() {
                     </Nav> */}
                 </Navbar.Collapse>
                 <Nav className='d-flex pull-right'>
-                    <Nav.Link href="#">
-                        <img
-                            src={userlogo}
-                            width="30"
-                            height="30"
-                            className="roundedCircle"
-                            alt="WOSA"
-                        />
+                    <Nav.Link href="/">
+                        Welcome User
                     </Nav.Link>
+                    <Nav.Link href="/">
+                        Dashboard
+                    </Nav.Link>
+                    <Button variant="outline-danger">Sign Out</Button>
                 </Nav>
             </Navbar>
         </>
